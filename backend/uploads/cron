@@ -1,0 +1,57 @@
+Jan  9 10:50:14 dokcer1 crond[1042]: (CRON) STARTUP (1.5.7)
+Jan  9 10:50:14 dokcer1 crond[1042]: (CRON) INFO (Syslog will be used instead of sendmail.)
+Jan  9 10:50:14 dokcer1 crond[1042]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 92% if used.)
+Jan  9 10:50:14 dokcer1 crond[1042]: (CRON) INFO (running with inotify support)
+Jan  9 11:01:01 dokcer1 CROND[3279]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 11:01:01 dokcer1 run-parts[3282]: (/etc/cron.hourly) starting 0anacron
+Jan  9 11:01:01 dokcer1 anacron[3292]: Anacron started on 2025-01-09
+Jan  9 11:01:01 dokcer1 anacron[3292]: Will run job `cron.daily' in 21 min.
+Jan  9 11:01:01 dokcer1 anacron[3292]: Will run job `cron.weekly' in 41 min.
+Jan  9 11:01:01 dokcer1 run-parts[3294]: (/etc/cron.hourly) finished 0anacron
+Jan  9 11:01:01 dokcer1 anacron[3292]: Jobs will be executed sequentially
+Jan  9 11:01:01 dokcer1 CROND[3278]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 11:22:01 dokcer1 anacron[3292]: Job `cron.daily' started
+Jan  9 11:22:01 dokcer1 anacron[3292]: Job `cron.daily' terminated
+Jan  9 11:42:01 dokcer1 anacron[3292]: Job `cron.weekly' started
+Jan  9 11:42:01 dokcer1 anacron[3292]: Job `cron.weekly' terminated
+Jan  9 11:42:01 dokcer1 anacron[3292]: Normal exit (2 jobs run)
+Jan  9 12:01:01 dokcer1 CROND[36334]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 12:01:01 dokcer1 run-parts[36337]: (/etc/cron.hourly) starting 0anacron
+Jan  9 12:01:01 dokcer1 run-parts[36343]: (/etc/cron.hourly) finished 0anacron
+Jan  9 12:01:01 dokcer1 CROND[36333]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 13:01:01 dokcer1 CROND[44520]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 13:01:01 dokcer1 run-parts[44523]: (/etc/cron.hourly) starting 0anacron
+Jan  9 13:01:01 dokcer1 run-parts[44529]: (/etc/cron.hourly) finished 0anacron
+Jan  9 13:01:01 dokcer1 CROND[44519]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 14:01:01 dokcer1 CROND[45681]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 14:01:01 dokcer1 run-parts[45684]: (/etc/cron.hourly) starting 0anacron
+Jan  9 14:01:01 dokcer1 run-parts[45690]: (/etc/cron.hourly) finished 0anacron
+Jan  9 14:01:01 dokcer1 CROND[45680]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 15:01:01 dokcer1 CROND[49314]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 15:01:01 dokcer1 run-parts[49317]: (/etc/cron.hourly) starting 0anacron
+Jan  9 15:01:01 dokcer1 run-parts[49323]: (/etc/cron.hourly) finished 0anacron
+Jan  9 15:01:01 dokcer1 CROND[49313]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 16:01:01 dokcer1 CROND[56609]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 16:01:01 dokcer1 run-parts[56612]: (/etc/cron.hourly) starting 0anacron
+Jan  9 16:01:01 dokcer1 run-parts[56618]: (/etc/cron.hourly) finished 0anacron
+Jan  9 16:01:01 dokcer1 CROND[56608]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 17:01:01 dokcer1 CROND[70517]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 17:01:01 dokcer1 run-parts[70520]: (/etc/cron.hourly) starting 0anacron
+Jan  9 17:01:01 dokcer1 run-parts[70526]: (/etc/cron.hourly) finished 0anacron
+Jan  9 17:01:01 dokcer1 CROND[70516]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 18:01:01 dokcer1 CROND[75391]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 18:01:01 dokcer1 run-parts[75394]: (/etc/cron.hourly) starting 0anacron
+Jan  9 18:01:01 dokcer1 run-parts[75400]: (/etc/cron.hourly) finished 0anacron
+Jan  9 18:01:01 dokcer1 CROND[75390]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 19:01:01 dokcer1 CROND[83734]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 19:01:01 dokcer1 run-parts[83737]: (/etc/cron.hourly) starting 0anacron
+Jan  9 19:01:01 dokcer1 run-parts[83743]: (/etc/cron.hourly) finished 0anacron
+Jan  9 19:01:01 dokcer1 CROND[83733]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 20:01:01 dokcer1 CROND[92816]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 20:01:01 dokcer1 run-parts[92819]: (/etc/cron.hourly) starting 0anacron
+Jan  9 20:01:01 dokcer1 run-parts[92825]: (/etc/cron.hourly) finished 0anacron
+Jan  9 20:01:01 dokcer1 CROND[92815]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jan  9 21:01:01 dokcer1 CROND[95346]: (root) CMD (run-parts /etc/cron.hourly)
+Jan  9 21:01:01 dokcer1 run-parts[95349]: (/etc/cron.hourly) starting 0anacron
+Jan  9 21:01:01 dokcer1 run-parts[95355]: (/etc/cron.hourly) finished 0anacron
+Jan  9 21:01:01 dokcer1 CROND[95345]: (root) CMDEND (run-parts /etc/cron.hourly)
