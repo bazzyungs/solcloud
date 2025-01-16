@@ -11,7 +11,8 @@ const Storage = () => {
       const response = await fetch('api/files');
       const data = await response.json();
       if (response.ok) {
-        setFiles(data);
+        const filteredFiles = data.filter((file) => file !== 'lost+found');
+        setFiles(filteredFiles);
       } else {
         console.error('파일 목록을 가져오는 데 실패했습니다.');
       }
@@ -67,6 +68,13 @@ const Storage = () => {
     }
   };
 
+  // 파일 다운로드 핸들러
+  const handleDownload = (fileName) => {
+    const fileUrl = `api/download/${fileName}`;
+    // 파일 다운로드를 위해 새 창을 열거나, 링크를 클릭하여 다운로드 처리
+    window.open(fileUrl, '_blank');
+  };
+
   // 컴포넌트가 마운트될 때 파일 목록 가져오기
   useEffect(() => {
     fetchFiles();
@@ -92,6 +100,7 @@ const Storage = () => {
             {files.map((file, index) => (
               <li key={index}>
                 {file}{' '}
+                <button onClick={() => handleDownload(file)}>다운로드</button>{' '}
                 <button onClick={() => handleDelete(file)}>삭제</button>
               </li>
             ))}

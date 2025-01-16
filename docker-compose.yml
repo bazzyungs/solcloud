@@ -9,6 +9,7 @@ services:
       - "3000:3000"
     environment:
       - CHOKIDAR_USEPOLLING=true
+    command: yarn build
 
   backend:
     build:
@@ -16,8 +17,8 @@ services:
     volumes:
       - ./backend:/app
     environment:
-      - DB_HOST=mariadb
-      - DB_USER=root
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_ROOT_PASSWORD}
       - DB_NAME=${DB_NAME}
     ports:
@@ -38,15 +39,44 @@ services:
       - frontend
       - backend
 
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:0.10.0
+    container_name: nginx-exporter
+    depends_on:
+      - nginx
+    ports:
+      - "9113:9113"
+    command:
+      - "-nginx.scrape-uri=http://solcloud-nginx-1:8080/stub_status"
+    restart: always
+
   mariadb:
-    image: mariadb
+    image: mariadb:10.3
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
     volumes:
       - mariadb-data:/var/lib/mysql
+      - ./mariadb/my.cnf:/etc/mysql/my.cnf
     ports:
       - "3306:3306"
+
+  mariadb-exporter:
+    image: prom/mysqld-exporter:v0.16.0
+    environment:
+      DATA_SOURCE_NAME: "exporter:password@(solcloud-mariadb-1:3306)/"
+    depends_on:
+      - mariadb
+    ports:
+      - "9104:9104"
+    command:
+      - "--web.listen-address=:9104"
+      - "--collect.info_schema.processlist"
+      - "--collect.info_schema.innodb_metrics"
+      - "--config.my-cnf=/.my.cnf"
+    volumes:
+      - ./mariadb-exporter/my.cnf:/.my.cnf
+    restart: always
 
 volumes:
   mariadb-data:
